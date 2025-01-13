@@ -151,13 +151,13 @@ For the general case: `proof by induction`
 
 **Proof**:
 
-Assume $P(\cup^{n}_{k=1}A_k) = \sum^{n}_{k=1}P(A_k)$
+Assume $P(\cup_{k=1}^{n}A_k) = \sum_{k=1}^{n}P(A_k)$
 
-we need to show: $P(\cup^{n+1}_{k=1}A_k) = \sum^{n+1}_{k=1}P(A_k)$
+we need to show: $P(\cup_{k=1}^{n+1}A_k) = \sum_{k=1}^{n+1}P(A_k)$
 
-Consider $P(\cup^{n+1}_{k=1}A_k) = P(\{\cup^{n}_{k=1}A_k\}\cup A_{n+1})$
+Consider $P(\cup_{k=1}^{n+1}A_k) = P(\{\cup_{k=1}^{n}A_k\}\cup A_{n+1})$
 
-Let $B_n = \cup^{n}_{k=1}A_k$
+Let $B_n = \cup_{k=1}^{n}A_k$
 
 * justification: we need to show $B_n$ and $A_{n+1}$ are mutually exclusive
 
