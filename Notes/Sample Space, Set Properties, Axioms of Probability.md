@@ -134,7 +134,7 @@ $$
 
 **Corollary:**
 
-$P(\cup^{n}_{k=1}A_k) = \sum^{n}_{k=1}P(A_k)$
+$P(\bigcup_{k=1}^{n}A_k) = \sum_{k=1}^{n}P(A_k)$
 
 Consider $n=2$
 
@@ -151,13 +151,13 @@ For the general case: `proof by induction`
 
 **Proof**:
 
-Assume $P(\cup_{k=1}^{n}A_k) = \sum_{k=1}^{n}P(A_k)$
+Assume $P(\bigcup_{k=1}^{n}A_k) = \sum_{k=1}^{n}P(A_k)$
 
-we need to show: $P(\cup_{k=1}^{n+1}A_k) = \sum_{k=1}^{n+1}P(A_k)$
+we need to show: $P(\bigcup_{k=1}^{n+1}A_k) = \sum_{k=1}^{n+1}P(A_k)$
 
-Consider $P(\cup_{k=1}^{n+1}A_k) = P(\{\cup_{k=1}^{n}A_k\}\cup A_{n+1})$
+Consider $P(\bigcup_{k=1}^{n+1}A_k) = P(\{\bigcup_{k=1}^{n}A_k\}\cup A_{n+1})$
 
-Let $B_n = \cup_{k=1}^{n}A_k$
+Let $B_n = \bigcup_{k=1}^{n}A_k$
 
 * justification: we need to show $B_n$ and $A_{n+1}$ are mutually exclusive
 
@@ -169,9 +169,9 @@ A_n \cap A_{n+1} = \emptyset\newline
 $$
 
 $$
-\{\cup^{n}_{k=1} A_k\} \cap A_{n+1}= \emptyset\newline
-\therefore P(\cup^{n}_{k=1}A_k) + P(A_{n+1}) = \sum^{n}_{k=1}P(A_k)+P(A_{n+1}) \newline
-=  \sum^{n+1}_{k=1}P(A_k)
+\{\bigcup_{k=1}^{n} A_k\} \cap A_{n+1}= \emptyset\newline
+\therefore P(\bigcup_{k=1}^{n}A_k) + P(A_{n+1}) = \sum_{k=1}^{n}P(A_k)+P(A_{n+1}) \newline
+=  \sum_{k=1}^{n+1}P(A_k)
 $$
 
 Now suppose $A$ and $B$ are not necessarily mutually exclusive. Then:
