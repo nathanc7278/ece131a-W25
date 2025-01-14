@@ -179,3 +179,47 @@ Now suppose $A$ and $B$ are not necessarily mutually exclusive. Then:
 $$
 P(A\cup B) = P(A) + P(B) - P(A\cap B)
 $$
+
+### Proof for $P(A\cup B) = P(A) + P(B) - P(A\cap B)$
+
+Assume $A \cup B$ is the entire set
+
+The distinct parts of the set can be seperated into three mutually exclusive sets:
+
+$$
+A\cup B = \{A\cap B^C\} \cup \{A\cap B\} \cup \{B\cap A^C\}
+$$
+
+From Axiom 3, it follows that:
+
+$$
+P(A\cup B) = P(A\cap B^C) + P(A\cap B) + P(B\cap A^C)
+$$
+
+Additionally:
+
+$$
+P(A) = P(A\cap B) + P(A\cap B^C)\newline
+P(B) = P(A\cap B) + P(B\cap A^C)
+$$
+
+$$
+P(A) + P(B) - P(A\cap B)\newline
+= P(A\cap B) + P(A\cap B^C) + P(A\cap B) + P(B\cap A^C) - P(A\cap B)\newline
+= P(A\cap B^C) + P(B\cap A^C) + P(A\cap B)\newline
+= P(A\cup B)
+$$
+
+The general form of the probability of union of sets is:
+
+$$
+P(A_1 \cup A_2 \cup ... \cup A_n) = \sum_{k=1}^nP(A_k) - \sum_{i,j = 1}^nP(A_i \cap A_j) + \sum P(A_1 \cap A_2 \cap A_3)... + (-1)^{n+1}P(A_1 \cap A_2 \cap ... \cap A_n)
+$$
+
+Consider $n = 3$:
+
+$$
+P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) +- [P(A_1\cap A_2) + P(A_1\cap A_3) + P(A_2\cap A_3)] + P(A_1\cap A_2\cap A_3)
+$$
+
+We can easily prove that $P(A\cup B) \leq P(A)+P(B)$ by using proof by induction adn princple of inclusion and exclusion. Because $P(A\cup B) = P(A) + P(B) - P(A\cap B)$ where $P(A\cap B) \ge 0$ by Axiom 1, we know $P(\cup_{k=1}^nA_k) \le \sum_{k=1}^nP(A_k)$  
