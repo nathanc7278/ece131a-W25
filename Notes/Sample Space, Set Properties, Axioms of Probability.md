@@ -222,4 +222,4 @@ $$
 P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) +- [P(A_1\cap A_2) + P(A_1\cap A_3) + P(A_2\cap A_3)] + P(A_1\cap A_2\cap A_3)
 $$
 
-We can easily prove that $P(A\cup B) \leq P(A)+P(B)$ by using proof by induction adn princple of inclusion and exclusion. Because $P(A\cup B) = P(A) + P(B) - P(A\cap B)$ where $P(A\cap B) \ge 0$ by Axiom 1, we know $P(\cup_{k=1}^nA_k) \le \sum_{k=1}^nP(A_k)$  
+We can easily prove that $P(A\cup B) \leq P(A)+P(B)$ by using proof by induction and princple of inclusion and exclusion. Because $P(A\cup B) = P(A) + P(B) - P(A\cap B)$ where $P(A\cap B) \ge 0$ by Axiom 1, we know $P(\cup_{k=1}^nA_k) \le \sum_{k=1}^nP(A_k)$  
