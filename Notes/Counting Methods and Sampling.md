@@ -186,3 +186,41 @@ Probability that their sum is equal to 5 is:
 $$
 P = \frac{2}{10} = \frac{1}{5}
 $$ 
+
+### Sampling with Replacement and without Ordering
+
+The idea is to keep track of how many times each object was selected.
+
+Example: Suppose we have 4 distinct objects. Pick them 5 times with replacement and without ordering.
+
+| object1 | object2| object3 | object4|
+| --- | --- | --- | --- |
+| XX | | XX | X |
+| XXXX | | X ||
+
+In the table above, there are two examples of how we can pick the 4 objects.
+
+Additionally we can use the following notation to display this type of sampling:
+
+`_ _ | | _ _ | _`
+
+We have 5 objects and 3 seperators that divides the 4 objects into groups. Thus we have 8 total black spaces that can either be taken by a seperator or a picked item.
+
+In how many ways can we choose 3 positions of 8 possible positions?
+
+$$
+{8\choose 3} = \frac{8!}{3!5!}
+$$
+
+Now for the general case:
+
+* $n$ objects picked $k$ times. The number of seperators will always be $n-1$. 
+
+$$
+{k+n-1\choose n-1} = {k+n-1\choose k}
+$$
+
+* How does choosing $n-1$ and choosing $k$ result in the same number of outcomes?
+$$
+{10\choose 3} = {10\choose 7}
+$$
