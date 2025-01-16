@@ -66,8 +66,8 @@ A = A\cap S\newline
 $$
 
 $$
-B_1 \cap B_2 = \empty\newline
-(A\cap B_1) \cap (A\cap B_2) = \empty
+B_1 \cap B_2 = \emptyset \newline
+(A\cap B_1) \cap (A\cap B_2) = \emptyset
 $$
 
 So we can use the third axiom of probability:
@@ -129,11 +129,15 @@ Q1: What is the probability that bit 1 is received?
 Q2: What is the probability that bit 1 was transmitted given that bit 1 is received?
 
 1. $$P(Y_1) = P(Y_1|X_1)P(X_1) + P(Y_1| X_0)P(X_0)\newline$$
-    * $$P(X_1)= P(X_0) = \frac{1}{2}\newline P(Y_1|X_1) = 1 - \epsilon_2 \newline P(Y_1|X_0) = \epsilon_1
-    $$
-    * $$ P(Y_1) = \epsilon_1 \frac{1}{2} + (1-\epsilon_2)\frac{1}{2} $$
+$$P(X_1)= P(X_0) = \frac{1}{2} \newline
+P(Y_1|X_1) = 1 - \epsilon_2 \newline
+P(Y_1|X_0) = \epsilon_1
+$$
 
-2. $$P(X_1|Y_1)= \frac{P(Y_1|X_1)P(X_1)}{P(Y_1)} \newline\text{Bayes Rule}\newline = \frac{(1-\epsilon_2)\frac{1}{2}}{(1-\epsilon_2)\frac{1}{2}+\epsilon_1\frac{1}{2}}
+$$P(Y_1) = \epsilon_1 \frac{1}{2} + (1-\epsilon_2)\frac{1}{2}
+      $$
+
+2. $$P(X_1|Y_1)= \frac{P(Y_1|X_1)P(X_1)}{P(Y_1)} \newline = \frac{((1-\epsilon_2)\frac{1}{2})}{(1-\epsilon_2)\frac{1}{2}+\epsilon_1\frac{1}{2}}$$
 
 ## Independence
 
@@ -141,12 +145,12 @@ We define two events $A$ and $B$ as independent if $P(A\cap B) = P(A)\times P(B)
 
 Recall: $$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
 
-If $A\perp \perp B$ then $$P(A|B) = \frac{P(A)\times P(B)}{P(B)} = P(A)$$
+If $$A\perp \perp B$ then $$P(A|B) = \frac{P(A)\times P(B)}{P(B)} = P(A)$$
 
-Likewise, if $A\perp \perp B$ then $$ P(A|B) = P(B)$$
+Likewise, if $$A\perp \perp B$ then $$ P(A|B) = P(B)$$
 
 Q: Are two events that are mutually exclusive also independent? No.
 
 $$
-P(A|B) = \frac{P(A\cap B)}{P(B)} = \frac{P(\empty)}{P(B)}=0 \ne P(A)
+P(A|B) = \frac{P(A\cap B)}{P(B)} = \frac{P(\emptyset)}{P(B)}=0 \ne P(A)
 $$
