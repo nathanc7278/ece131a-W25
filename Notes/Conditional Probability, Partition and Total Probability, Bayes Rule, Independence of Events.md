@@ -1,4 +1,4 @@
-# Conditional Probability, Partitions and Total Probability, Bayes Rule,and Independenc
+# Conditional Probability, Partitions and Total Probability, Bayes Rule,and Independence
 
 ## Conditional Probability
 
