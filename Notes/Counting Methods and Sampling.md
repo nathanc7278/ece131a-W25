@@ -68,10 +68,18 @@ Example: Suppose the box contains 5 balls, numbered 1 through 5. Pick 2 balls wi
 By listing the whole sample space, we get:
 
 $$
-S = \{(1,1), (1,2), (1,3), (1,4), (1,5),$$
-(2,1), (2,2), (2,3), (2,4), (2,5),$$ $$
-(3,1), (3,2), (3,3), (3,4), (3,5),$$ $$
-(4,1), (4,2), (4,3), (4,4), (4,5),$$ $$
+S = \{(1,1), (1,2), (1,3), (1,4), (1,5),
+$$
+$$
+(2,1), (2,2), (2,3), (2,4), (2,5),
+$$
+$$
+(3,1), (3,2), (3,3), (3,4), (3,5),
+$$
+$$
+(4,1), (4,2), (4,3), (4,4), (4,5),
+$$
+$$
 (5,1), (5,2), (5,3), (5,4), (5,5)\}
 $$
 
@@ -117,10 +125,18 @@ Example: Lets revisit the example above with 5 numbered balls, but now we sample
 By listing the whole sample space, we get:
 
 $$
-S = \{(1,2), (1,3), (1,4), (1,5),$$ $$
-(2,1), (2,3), (2,4), (2,5),$$ $$
-(3,1), (3,2), (3,4), (3,5),$$ $$
-(4,1), (4,2), (4,3), (4,5),$$ $$
+S = \{(1,2), (1,3), (1,4), (1,5),
+$$
+$$
+(2,1), (2,3), (2,4), (2,5),
+$$
+$$
+(3,1), (3,2), (3,4), (3,5),
+$$
+$$
+(4,1), (4,2), (4,3), (4,5),
+$$
+$$
 (5,1), (5,2), (5,3), (5,4)\}
 $$
 
@@ -162,16 +178,24 @@ $$
 Suppose we have $n$ objects to choose from. When we draw $k$ objects one at a time from $n$ objects, we collectively set them aside and we inspect this collection as a whole.
 
 $$
-{n\choose k} = \frac{n(n-1)...(n-k+1)}{k!} = \frac{n!}{k!(n-k)!}$$ $$
+{n\choose k} = \frac{n(n-1)...(n-k+1)}{k!} = \frac{n!}{k!(n-k)!}
+$$
+$$
 n(n-1)...(n-k+1) = \frac{n!}{(n-k)!}
 $$
 
 Example: Suppose we have a box with 5 balls numbered 1-5. What is the probability that when we pick 2 balls together, their sum is equal to 5?
 
 $$
-S = \{\{1,2\}, \{1,3\}, \{1,4\}, \{1,5\},$$ $$
-\{2,3\},\{2,4\},\{2,5\},$$ $$
-\{3,4\},\{3,5\},$$ $$
+S = \{\{1,2\}, \{1,3\}, \{1,4\}, \{1,5\},
+$$
+$$
+\{2,3\},\{2,4\},\{2,5\},
+$$
+$$
+\{3,4\},\{3,5\},
+$$
+$$
 \{4,5\}\}
 $$
 
