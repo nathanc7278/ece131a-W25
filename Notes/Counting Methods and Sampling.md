@@ -184,12 +184,12 @@ Example: Suppose we have a box with 5 balls numbered 1-5. What is the probabilit
 $$
 \begin{equation}
 S =
-\begin{pmatrix}
-\{1,2\}, & \{1,3\} & \{1,4\} & \{1,5\}\\
-\{2,3\} & \{2,4\} & \{2,5\} \\
-\{3,4\} & \{3,5\} \\
-\{4,5\}
-\end{pmatrix}\
+\begin{Bmatrix}
+(1,2) & (1,3) &(1,4) & (1,5)\\
+(2,3) & (2,4) & (2,5) \\
+(3,4) & (3,5) \\
+(4,5)
+\end{Bmatrix}\
 \end{equation}
 $$
 
