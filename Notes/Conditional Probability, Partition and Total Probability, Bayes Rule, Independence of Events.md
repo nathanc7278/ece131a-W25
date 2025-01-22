@@ -42,10 +42,11 @@ What is $P(A|B)$ and $P(A|C)$?
 Example 2: Suppose we have a box with 5 balls, 2 of which are black and 3 of which are white. Suppose we pick two balls without replacement. What is the probability that both balls are white?
 
 $$
-P(A|B) = \frac{P(A\cap B)}{P(B)}$$
+P(A|B) = \frac{P(A\cap B)}{P(B)}
 $$
+
 $$
-P(A|B) P(B) = P(A\cap B)
+P(A|B)P(B) = P(A\cap B)
 $$
 
 Therefore: 
@@ -59,16 +60,7 @@ $$
 Let $B_1,B_2,...,B_n$ be mutually exclusive events whose union is $S$. Such a collection of events is called a `partition`. 
 
 $$
-P(A) = P(A|B_1)P(B_1)
-$$
-$$
-+ P(A|B_2)P(B_2)
-$$
-$$
-\vdots
-$$
-$$
-+ P(A|B_n)P(B_n)
+P(A) = P(A|B_1)P(B_1) + P(A|B_2)P(B_2) + ... +  P(A|B_n)P(B_n)
 $$
 
 Proof: 
@@ -181,7 +173,7 @@ Recall: $$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
 
 If $$A\perp \perp B$ then $$P(A|B) = \frac{P(A)\times P(B)}{P(B)} = P(A)$$
 
-Likewise, if $$A\perp \perp B$$ then $$ P(A|B) = P(B)$$
+Likewise, if $$A\perp \perp B$$ then $P(A|B) = P(B)$
 
 Q: Are two events that are mutually exclusive also independent? No.
 
