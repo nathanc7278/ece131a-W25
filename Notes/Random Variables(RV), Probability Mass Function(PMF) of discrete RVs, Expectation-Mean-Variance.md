@@ -74,10 +74,22 @@ $P(X=X_i) = P(A_I)$ where $A_i$ is the set of outcomes for which $X_S = X_i$.
 Suppose we did the previous example with a fair coin. 
 
 $$
-P(H) = P(T) = \frac{1}{2}\newline
-P(HHH)=\frac{1}{8}, P(X=3)=\frac{1}{8}\newline
-P(TTT)=\frac{1}{8}, P(X=0)=\frac{1}{8}\newline
-P(X=1)=\frac{3}{8}\newline
+P(H) = P(T) = \frac{1}{2}
+$$
+
+$$
+P(HHH)=\frac{1}{8}, P(X=3)=\frac{1}{8}
+$$
+
+$$
+P(TTT)=\frac{1}{8}, P(X=0)=\frac{1}{8}
+$$
+
+$$
+P(X=1)=\frac{3}{8}
+$$
+
+$$
 P(X=2)=\frac{3}{8}
 $$
 
@@ -85,8 +97,9 @@ $$
 
 1. $$P_x(X=X_i) \ge 0$$
 2. $$\sum_{i=1 \in S_x}P(X=X_i) = 1$$
-3. $$P(X in B) = \sum_{X_i = B}P_x(X=X_i)\newline= P(\cup_{X_i=B} \{S:X(S)=X_i\})\newline\sum_{X_i\in B}P(\{S:X(S)=X_i\})
-$$
+3. $$P(X in B) = \sum_{X_i = B}P_x(X=X_i)$$
+   $$= P(\cup_{X_i=B} \{S:X(S)=X_i\})$$
+   $$\sum_{X_i\in B}P(\{S:X(S)=X_i\})$$
 
 ### Example: Coin Toss
 
@@ -95,9 +108,18 @@ What is the probability that $X$ is at least $2$?
 Recall $Sx = \{0,1,2,3\}$.
 
 $$
-P(X \ge 2) = P(X \in \{2,3\})\newline
-= P(X=2) + P(X=3)\newline
-= \frac{3}{8} + \frac{1}{8}\newline
+P(X \ge 2) = P(X \in \{2,3\})
+$$
+
+$$
+= P(X=2) + P(X=3)
+$$
+
+$$
+= \frac{3}{8} + \frac{1}{8}
+$$
+
+$$
 = \frac{1}{2}
 $$
 
@@ -150,11 +172,26 @@ Observe that $Z$ is also a RV.
 Let's compute $\Bbb{E}[Z]$.
 
 $$
-\Bbb{E}[Z] = \Bbb{E}[ag(x) + bh(x) + c]\newline
-= \sum_{X_i\in S_X}(ag(X_i)+bh(X_i)+c)P(X=X_i)\newline
-= \sum_{X_i\in S_X} ag(X_i) P(X=X_i) + \sum_{X_i\in S_X}bh(X_i)P(X=X_i)+ \sum_{X_i\in S_X}c P(X=X_i)\newline
-\text{Note: }c\sum_{X_i\in S_X}P(X=X_i)=c\times 1 = c\newline
-= a\sum_{X_i\in S_X} g(X_i) P(X=X_i) + b\sum_{X_i\in S_X}h(X_i)P(X=X_i) + c\newline
+\Bbb{E}[Z] = \Bbb{E}[ag(x) + bh(x) + c]
+$$
+
+$$
+= \sum_{X_i\in S_X}(ag(X_i)+bh(X_i)+c)P(X=X_i)
+$$
+
+$$
+= \sum_{X_i\in S_X} ag(X_i) P(X=X_i) + \sum_{X_i\in S_X}bh(X_i)P(X=X_i)+ \sum_{X_i\in S_X}c P(X=X_i)
+$$
+
+$$
+\text{Note: }c\sum_{X_i\in S_X}P(X=X_i)=c\times 1 = c
+$$
+
+$$
+= a\sum_{X_i\in S_X} g(X_i) P(X=X_i) + b\sum_{X_i\in S_X}h(X_i)P(X=X_i) + c
+$$
+
+$$
 = a\Bbb{E}[g(x)]+b\Bbb{E}[h(x)]+c
 $$
 
