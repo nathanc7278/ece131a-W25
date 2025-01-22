@@ -159,15 +159,19 @@ Q1: What is the probability that bit 1 is received?
 
 Q2: What is the probability that bit 1 was transmitted given that bit 1 is received?
 
-1. $$P(Y_1) = P(Y_1|X_1)P(X_1) + P(Y_1| X_0)P(X_0)$$
+1. $$P(Y_1) = P(Y_1|X_1)P(X_1) + P(Y_1| X_0)P(X_0) $$
+
 $$P(X_1)= P(X_0) = \frac{1}{2} $$
+
 $$P(Y_1|X_1) = 1 - \epsilon_2 $$
+
 $$P(Y_1|X_0) = \epsilon_1 $$
 
 $$P(Y_1) = \epsilon_1 \frac{1}{2} + (1-\epsilon_2)\frac{1}{2} $$
 
 2. $$P(X_1|Y_1)= \frac{P(Y_1|X_1)P(X_1)}{P(Y_1)} $$
-$$ = \frac{((1-\epsilon_2)\frac{1}{2})}{(1-\epsilon_2)\frac{1}{2}+\epsilon_1\frac{1}{2}}$$
+
+$$ = \frac{((1-\epsilon_2)\frac{1}{2})}{(1-\epsilon_2)\frac{1}{2}+\epsilon_1\frac{1}{2}} $$
 
 ## Independence
 
