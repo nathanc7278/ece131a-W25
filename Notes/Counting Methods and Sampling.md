@@ -68,20 +68,18 @@ Example: Suppose the box contains 5 balls, numbered 1 through 5. Pick 2 balls wi
 By listing the whole sample space, we get:
 
 $$
-S = \{(1,1), (1,2), (1,3), (1,4), (1,5),
+\begin{equation}
+S =
+\begin{pmatrix}
+(1,1) & (1,2) & (1,3) & (1,4) & (1,5)\\
+(2,1) & (2,2) & (2,3) & (2,4) & (2,5)\\
+(3,1) & (3,2) & (3,3) & (3,4) & (3,5)\\
+(4,1) & (4,2) & (4,3) & (4,4) & (4,5)\\
+(5,1) & (5,2) & (5,3) & (5,4) & (5,5)
+\end{pmatrix}\
+\end{equation}
 $$
-$$
-(2,1), (2,2), (2,3), (2,4), (2,5),
-$$
-$$
-(3,1), (3,2), (3,3), (3,4), (3,5),
-$$
-$$
-(4,1), (4,2), (4,3), (4,4), (4,5),
-$$
-$$
-(5,1), (5,2), (5,3), (5,4), (5,5)\}
-$$
+
 
 There are 25 total outcomes.
 
@@ -125,19 +123,16 @@ Example: Lets revisit the example above with 5 numbered balls, but now we sample
 By listing the whole sample space, we get:
 
 $$
-S = \{(1,2), (1,3), (1,4), (1,5),
-$$
-$$
-(2,1), (2,3), (2,4), (2,5),
-$$
-$$
-(3,1), (3,2), (3,4), (3,5),
-$$
-$$
-(4,1), (4,2), (4,3), (4,5),
-$$
-$$
-(5,1), (5,2), (5,3), (5,4)\}
+\begin{equation}
+S =
+\begin{pmatrix}
+(1,2) & (1,3) &(1,4) & (1,5) \\
+(2,1) & (2,3) & (2,4) & (2,5) \\
+(3,1) & (3,2) & (3,4) & (3,5) \\
+(4,1) & (4,2) & (4,3) & (4,5) \\
+(5,1) & (5,2) & (5,3) & (5,4) \\
+\end{pmatrix}\
+\end{equation}
 $$
 
 There are 20 total outcomes.
@@ -187,16 +182,15 @@ $$
 Example: Suppose we have a box with 5 balls numbered 1-5. What is the probability that when we pick 2 balls together, their sum is equal to 5?
 
 $$
-S = \{\{1,2\}, \{1,3\}, \{1,4\}, \{1,5\},
-$$
-$$
-\{2,3\},\{2,4\},\{2,5\},
-$$
-$$
-\{3,4\},\{3,5\},
-$$
-$$
-\{4,5\}\}
+\begin{equation}
+S =
+\begin{pmatrix}
+\{1,2\}, & \{1,3\} & \{1,4\} & \{1,5\}\\
+\{2,3\} & \{2,4\} & \{2,5\} \\
+\{3,4\} & \{3,5\} \\
+\{4,5\}
+\end{pmatrix}\
+\end{equation}
 $$
 
 The total number of outcomes $|S| = 10$. We can also derive this by doing:
