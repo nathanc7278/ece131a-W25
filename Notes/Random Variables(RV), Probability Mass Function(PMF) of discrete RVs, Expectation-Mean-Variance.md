@@ -206,3 +206,30 @@ $$
 `m` mean is: $\Bbb{E}[X] = \sum_{X_i\in S_X}X_iP(X=X_i) = m_X$
 
 `V` variance is: $\Bbb{E}[(X-m_X)^2] = \sum_{X_i\in S_X}(X_i-m_X)^2P(X=X_i)$
+
+$$ 
+\Bbb{E}[(X-m_X)^2] = \Bbb{E}[X^2] - \Bbb{E}[2m_XX] + \Bbb{E}[m_X^2]
+$$
+
+$$
+= \Bbb{E}[X^2] - 2m_X\Bbb{E}[X] + m_X^2
+$$
+
+$$
+= \Bbb{E}[X^2] - 2m_X^2 + m_X^2
+$$
+
+$$
+= \Bbb{E}[X^2] - m_X^2
+$$
+
+$$
+\text{VAR}(aX) = a^2\text{VAR}(X)
+$$
+
+$$
+\text{VAR}(X + b) = \text{VAR}(X) \tag{unchanged}
+$$
+
+
+
