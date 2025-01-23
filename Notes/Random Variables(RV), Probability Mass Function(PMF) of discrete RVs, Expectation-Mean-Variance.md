@@ -228,7 +228,7 @@ $$
 $$
 
 $$
-\text{VAR}(X + b) = \text{VAR}(X) \tag{unchanged}
+\text{VAR}(X + b) = \text{VAR}(X)
 $$
 
 
