@@ -97,8 +97,10 @@ $$
 
 1. $$P_x(X=X_i) \ge 0$$
 2. $$\sum_{i=1 \in S_x}P(X=X_i) = 1$$
-3. $$P(X in B) = \sum_{X_i = B}P_x(X=X_i)$$
+3. $$P(X \in B) = \sum_{X_i = B}P_x(X=X_i)$$
+   
    $$= P(\cup_{X_i=B} \{S:X(S)=X_i\})$$
+   
    $$\sum_{X_i\in B}P(\{S:X(S)=X_i\})$$
 
 ### Example: Coin Toss
