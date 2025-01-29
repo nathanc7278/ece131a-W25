@@ -81,7 +81,7 @@ Bernouli($\frac{1}{2}$):
 | $1$ | $\frac{1}{2}$ |
 
 $$
-\Bbb{E}[X] = 1 -p + 0(1-p) = p
+\Bbb{E}[X] = 1\times p + 0(1-p) = p
 $$
 
 $$
