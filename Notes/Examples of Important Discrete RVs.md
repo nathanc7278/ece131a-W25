@@ -236,7 +236,7 @@ $$
 
 Linearity of Expectations. The general result of discrete RVs.
 
-Now suppose $X \perp\!\! \perp Y$:
+Now suppose $X \perp \perp Y$:
 
 $X$ and $Y$ are independent:
 
@@ -247,7 +247,6 @@ $$ P(X=x, Y=y) = P(X=x)P(Y=y)$$
 Consider
 $$\begin{align*}
 \Bbb{E}[XY] &= \sum_Y \sum_X xyP(X=x, Y=y) \\
-\text{if independent:} \\
 &= \sum_Y \sum_X xyP(X=x)P(Y=y)\\
 &= \sum_Y yP(Y=y)\sum_X xP(X=x)\\
 &= \Bbb{E}[X] \times \Bbb{E}[Y]
