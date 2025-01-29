@@ -173,7 +173,7 @@ Recall: $$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
 
 If $$A\perp \perp B$ then $$P(A|B) = \frac{P(A)\times P(B)}{P(B)} = P(A)$$
 
-Likewise, if $$A\perp \perp B$$ then $P(A|B) = P(B)$
+Likewise, if $A\perp \perp B$ then $P(A|B) = P(B)$
 
 Q: Are two events that are mutually exclusive also independent? No.
 
