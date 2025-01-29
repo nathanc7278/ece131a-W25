@@ -255,7 +255,7 @@ $$
 \end{align*}
 $$
 
-If $X \perp\!\! \perp Y$ then we say that $X$ and $Y$ are `uncorrelated`. Note that independence implies uncorrelatedness but not the other way around.
+If $X \perp \perp Y$ then we say that $X$ and $Y$ are `uncorrelated`. Note that independence implies uncorrelatedness but not the other way around.
 
 Example:
 
