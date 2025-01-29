@@ -147,6 +147,7 @@ $$
 3. What is the probability of picking balls with adjacent numbers?
 
 If balls 1 and 5 are picked first, the number of adjacent balls is equal to 1. When we look at balls, 2-4, the number of adjacent balls that can be picked is 2.
+
 $$
 P = \frac{1 + 1 + 2 * 3}{20} = \frac {8}{20}
 $$
