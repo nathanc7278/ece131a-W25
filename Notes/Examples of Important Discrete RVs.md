@@ -156,7 +156,7 @@ $$
 $$
 \begin{align*}
 \sum_{i=1}^\infty (1-p)^{i-1}p &= p \sum_{i=1}^\infty (1-p)^{i-1} \\
-&= P\sum_{i=0}^\infty (1-p)^{i} \\
+&= p\sum_{i=0}^\infty (1-p)^{i} \\
 &= \frac{1}{1-(1-p)}p = 1
 \end{align*}
 $$
