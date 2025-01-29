@@ -406,6 +406,7 @@ $$
 
 1. $$0 \le F_X(x) \le 1$$
 2. 
+
 $$
 \begin{align*}
 &\lim_{x\rightarrow \infty}F_X(x)=1 \\ 
