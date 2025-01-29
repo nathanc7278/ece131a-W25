@@ -413,6 +413,7 @@ $$
 &\lim_{x\rightarrow -\infty}F_X(x)=0
 \end{align*}
 $$
+
 3. $F_X$ is non-decreasing
 4. CDF is right continuous
 
