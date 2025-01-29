@@ -339,7 +339,7 @@ X &= Y_1 + Y_2 +...+ Y_n\text{ where }Y_i=
 \end{align*}
 $$
 
-$X$ binomial(n,p) is the sum of n independent Bernoulli RVs(p). Therfore:
+$X$ binomial(n,p) is the sum of n independent Bernoulli RVs(p). Therefore:
 
 $$\begin{align*}
 \Bbb{E}[X] &= \Bbb{E}[Y_1] + \Bbb{E}[Y_2] + ... + \Bbb{E}[Y_n]\\
@@ -376,7 +376,7 @@ P(X \le x) &= P(X \in (-\infty, x))\\
 \end{align*}
 $$
 
-Example: SUppose we toss a fair coin twice. Let's denote the number of heads
+Example: Suppose we toss a fair coin twice. Let's denote the number of heads
 
 ```
     TT  TH  HT  HH
