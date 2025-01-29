@@ -231,5 +231,206 @@ $$
 \text{VAR}(X + b) = \text{VAR}(X)
 $$
 
+## (Un)correlatedness of RVs
+
+Consider $X$, $Y$ as two discrete RVs
+
+$$\begin{align*}
+\Bbb{E}[X+Y] &= \sum_Y \sum_X (X+Y) P(X=x, Y=y) \\
+&=\sum_Y \sum_X X P(X=x, Y=y) + \sum_Y \sum_X Y P(X=x, Y=y) \\
+&=\sum_X X \sum_Y P(X=x, Y=y) + \sum_Y Y\sum_X P(X=x, Y=y) \\
+&=\sum_X X P(X=x) + \sum_Y Y P(Y=y) \\
+&=\Bbb{E}[X] + \Bbb{E}[Y]
+\end{align*}
+$$
+
+Linearity of Expectations. The general result of discrete RVs.
+
+Now suppose $X \perp\!\! \perp Y$:
+
+$X$ and $Y$ are independent:
+
+$$ \forall X, Y$$
+
+$$ P(X=x, Y=y) = P(X=x)P(Y=y)$$
+
+Consider
+$$\begin{align*}
+\Bbb{E}[XY] &= \sum_Y \sum_X xyP(X=x, Y=y) \\
+\text{if independent:} \\
+&= \sum_Y \sum_X xyP(X=x)P(Y=y)\\
+&= \sum_Y yP(Y=y)\sum_X xP(X=x)\\
+&= \Bbb{E}[X] \times \Bbb{E}[Y]
+\end{align*}
+$$
+
+If $X \perp\!\! \perp Y$ then we say that $X$ and $Y$ are `uncorrelated`. Note that independence implies uncorrelatedness but not the other way around.
+
+Example:
+
+```
+X        -1     0     1
+P(X)     1/3   1/3   1/3
+
+Y=|X|     0     1
+P(Y)     1/3   1/3
+```
+
+```
+Possible pairings: Each with probability 1/3
+(X, Y) ==> (-1, 1), (0,0), (1,1)
+```
+
+$$\begin{align*}
+\Bbb{E}[XY] &= \sum_Y \sum_X xyP(X=x, Y=y) \\
+&= -1(\frac{1}{3}) + 0(\frac{1}{3}) + 1(\frac{1}{3}) \\
+&= 0
+\end{align*}
+$$
+
+$$\begin{align*}
+\Bbb{E}[X]\Bbb{E}[Y] &= 0(\frac{2}{3}) \\
+&= 0
+\end{align*}
+$$
+
+Is it true that $\text{VAR}(X+Y) = \text{VAR}(X) + \text{VAR}(Y)$
+
+And if not always true, under what condition does it hold?
+
+$$\begin{align*}
+\text{VAR}(X+Y) &= \Bbb{E}[(X+Y)^2] - (\Bbb{E}[X+Y])^2\\
+&= \Bbb{E}[X^2 + 2XY + Y^2] - (\Bbb{E}[X] + \Bbb{E}[Y])^2\\
+&= \Bbb{E}[X^2 + 2XY + Y^2] - (m_X + m_Y)^2\\
+&= \Bbb{E}[X^2] + \Bbb{E}[2XY] + \Bbb{E}[Y^2] - (m_X^2 +2m_Xm_Y + m_Y^2)\\
+&= \text{VAR}(X) + \text{VAR}(Y) + 2\Bbb{E}[XY] - 2m_Xm_Y\\
+&=> \text{VAR}(X+Y) = \text{VAR}(X) + \text{VAR}(Y)
+\end{align*}
+$$
+
+if $X$ and $Y$ are uncorrelated.
+
+## Binomial RV(n, p)
+
+$X$ is a Binomial RV: it denotes the number of successes in n independent Bernoulli trials, weach with probability of success p.
+
+$$
+Y = \begin{cases}
+1 \text{ with probability } p \text{ "success"} \\
+0 \text{ with probability } 1-p \text{ "failure"} \\
+\end{cases}
+$$
+
+$$
+P(X=k) = {n\choose k}p^k (1-p)^{n-k} \text{ for } 0 \le k \le n
+$$
+
+Example: Toss a biased coin 10 times
+
+$P(H) = p$
+
+Count how many times we observed H.
+
+$X \in {0, 1, ..., 10}$
+
+$P(X=0) = (1-p)^10$
+
+$P(X=1) = {10 \choose 1}p^1(1-p)^9$
+
+$$\begin{align*}
+\Bbb{E}[X] &= \sum_{k=0}^nkP(X=k)\\
+&= \sum_{k=0}^nk{n\choose k}p^k(1-p)^{n-k}\\
+X &= Y_1 + Y_2 +...+ Y_n\text{ where }Y_i=
+\begin{cases}
+1 \text{ with probability } p\\
+0 \text{ with probability } 1-p \\
+\end{cases}
+\end{align*}
+$$
+
+$X$ binomial(n,p) is the sum of n independent Bernoulli RVs(p). Therfore:
+
+$$\begin{align*}
+\Bbb{E}[X] &= \Bbb{E}[Y_1] + \Bbb{E}[Y_2] + ... + \Bbb{E}[Y_n]\\
+&= n\times p
+\end{align*}
+$$
+
+$$\begin{align*}
+\text{VAR}(X) &= n\text{VAR}(Y_i)\\
+&=n\times p(1-p)
+\end{align*}
+$$
+
+## Poisson RV ($\lambda$)
+
+Poisson RV is a discrete RV that measures the number of events per unit time, where events occur with some known average rate, $\lambda$, independently of other events. In this definition, events are occurances, not outcomes.
+
+$\lambda$ is the average arrival rate
+
+$$
+P(X=k) = \frac{\lambda^ke^{-k}}{k!}
+$$
+
+## Continuous RVs
+
+$$
+F_X(x) = P(X \le x)
+$$
+
+$$\begin{align*}
+P(X \le x) &= P(X \in (-\infty, x))\\
+&= P(\theta : X(\theta) \le x)\\
+\theta \in S \text{ sample space}
+\end{align*}
+$$
+
+Example: SUppose we toss a fair coin twice. Let's denote the number of heads
+
+```
+    TT  TH  HT  HH
+X    0   1   1   2
+```
+
+```
+X       0       1       2
+P(X)   1/4     1/2     1/4
+```
+
+$$
+F_X(a) = P(X \le a)
+$$
+
+$$\begin{align*}
+P(X \le 0) &= \frac{1}{4}\\
+P(X \le 0.99) &= \frac{1}{4}\\
+P(X \le 1) &= \frac{1}{4} + \frac{1}{2} = \frac{3}{4}\\
+P(X \le 2) &= \frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1
+\end{align*}
+$$
+
+![Continuous RV](./Images/SampleContinuousRV.jpg)
+
+### Properties of CDF
+
+1. $$0 \le F_X(x) \le 1$$
+2. 
+$$
+\begin{align*}
+&\lim_{x\rightarrow \infty}F_X(x)=1 \\ 
+&\lim_{x\rightarrow -\infty}F_X(x)=0
+\end{align*}
+$$
+3. $F_X$ is non-decreasing
+4. CDF is right continuous
+
+$$
+F_X(b) = \lim_{h\rightarrow 0}F_X(b+h) \text{ for } h>0
+$$
+$$
+F_X(b) = F_X(b^+)
+$$
+
+CDF is not necessarily left-continuous
 
 
