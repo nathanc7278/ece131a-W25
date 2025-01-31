@@ -400,7 +400,7 @@ P(X \le 2) &= \frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1
 \end{align*}
 $$
 
-![Continuous RV](./Images/SampleContinuousRV.jpg)
+![CDF](./Images/samplecdf.jpg)
 
 ### Properties of CDF
 
