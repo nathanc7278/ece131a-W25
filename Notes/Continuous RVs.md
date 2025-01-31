@@ -1,6 +1,6 @@
 All probabilities of interest associated witha  given random variable `X` can be expressed in terms of a CDF
 
-1. $P(a\lt C \le b) = F_X(b) - F_X(a)$
+1. $P(a\lt X \le b) = F_X(b) - F_X(a)$
 2. $P(X = b) = F_X(b) - F_X(b^-)$
 3. $P(x \gt a) = 1- F_X(a)$
 4. $P(a\le X \le b) = F_X(b) - F_X(a^-)$
