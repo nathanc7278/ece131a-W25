@@ -190,7 +190,7 @@ $$
 f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \text{ for } x \in \Bbb{R}, f_X(X)\gt 0
 $$
 
-![gaussianrv2](./Images/gaussianrv1)
+![gaussianrv2](./Images/gaussianrv1.jpg)
 
 $$
 \sigma_2^2 > \sigma_1^2
@@ -275,7 +275,7 @@ $$
 \Phi (a) = 1 - Q(a)
 $$
 
-![gaussianrv2](./Images/gaussianrv2)
+![gaussianrv2](./Images/gaussianrv2.jpg)
 
 $$
 Q(-a) = 1- Q(a) \text{ by symmetry}
