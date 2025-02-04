@@ -189,3 +189,184 @@ $$
 $$
 f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \text{ for } x \in \Bbb{R}, f_X(X)\gt 0
 $$
+
+![gaussianrv2](./Images/gaussianrv1)
+
+$$
+\sigma_2^2 > \sigma_1^2
+$$
+
+Note that any Gaussian $N(\mu, \sigma^2)$ can be expressed in terms of $N(0, 1)$. This is called the `Standard Normal`.
+
+$$
+f_X(x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}
+$$
+
+Suppose $Y ~ N(\mu, \sigma^2)$:
+
+$$
+\begin{align*}
+P(Y \lt a) &= \int_{-\infty}^{a}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(Y-\mu)^2}{2\sigma^2}}\\
+t=\frac{Y-\mu}{\sigma}\\
+\frac{dy}{dt} = \sigma\\
+dy = \sigma dt\\
+&=\int_{-\infty}^{\frac{a-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}} = P(X \le \frac{a-\mu}{\sigma})\\
+\end{align*}
+$$
+
+$F_Y(a) = F_X(\frac{a-\mu}{\sigma})$ where $Y ~ N(\mu, \sigma^2)$ and $X ~ N(0,1)$
+
+Proof that $\int_{-\infty}^{\infty}f_X(x)dx = 1$
+
+$$
+\begin{align*}
+&\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx = 1\\
+&a * a = 1\\
+&a = 1 \text{ a = -1 is not a probelm because P cannot be negative}\\
+&=\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy\\
+&=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2+y^2}{2}}dxdy\\
+x=r\cos\theta, y=r\sin\theta\\
+&=\int_{0}^{2\pi}\int_{0}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{r^2}{2}}rdrd\theta\\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\text{Jacobian:}\\
+\frac{dx}{dr}=\cos \theta, \frac{dx}{d\theta} =r\sin \theta\\
+\frac{dy}{dr}=\sin \theta, \frac{dy}{d\theta} =r\cos \theta\\
+\text{det}
+\begin{bmatrix}
+\frac{dx}{dr} & \frac{dx}{d\theta}\\
+\frac{dy}{dr} & \frac{dy}{d\theta}\\
+\end{bmatrix}
+= r\cos^2 \theta + r\sin^2 \theta = r
+\end{align*}
+$$
+
+$$
+\begin{align*}
+&=\int_{0}^{\infty}re^{-\frac{r^2}{2}}dr\int_{0}^{2\pi}\frac{1}{\sqrt{2\pi}}d\theta\\
+& = \text{left side is PDF of exponential, right side is PDF of uniform} = 1
+\end{align*}
+$$
+
+Standard Gaussian:
+
+$\Phi(x)$ denotes the CDF of a standard Gaussian.
+
+$$
+\Phi(x) = \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}
+$$
+
+For any Gausian:
+
+$$
+F_Y(a) = \Phi(\frac{a-\mu}{\sigma})
+$$
+
+The Q function: tail probability of standard Gaussian
+
+$$
+Q(a) = P(X > a), X ~ N (0,1)
+$$
+
+$$
+\Phi (a) = 1 - Q(a)
+$$
+
+![gaussianrv2](./Images/gaussianrv2)
+
+$$
+Q(-a) = 1- Q(a) \text{ by symmetry}
+$$
+
+For Standard Gaussian:
+
+$$
+\Bbb{E}[x] = \int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}xe^{-\frac{x^2}{2}}dx = 0
+$$
+
+$$
+\text{VAR}(x) = \Bbb{E}[x^2] - (\Bbb{E}[x])^2 = \Bbb{E}[x^2] = 1
+$$
+
+For any Gaussian: $Y ~ N(\mu, \sigma^2), x= \frac{y-\mu}{\sigma}$
+
+$$
+\Bbb{E}[y] = \Bbb{E}[\sigma x + \mu] = \mu
+$$
+
+$$
+\text{VAR}(y) = \sigma^2
+$$
+
+`mu` is the mean of Y
+
+`sigma^2` is the variance of Y
+
+`sigma = sqrt(sigma^2)` is called the standard deviation
+
+### Example
+
+Consider $X ~ N (-1, 4)$. Express $P(x<0)$ in terms of Q function.
+
+$$
+\begin{align*}
+P(x < 0) &= P(\frac{x-\mu}{\sigma} < \frac{0-\mu}{\sigma}), \sigma > 0\\
+P(x < 0) &= P(\frac{x+1}{2} < \frac{1}{2})\\
+&= P(Y < \frac{1}{2}) = 1- Q(\frac{1}{2})
+\end{align*}
+$$
+
+Consider $X ~ N (5, 100)$. Express $P(x>25)$ in terms of Q function.
+
+$$
+\begin{align*}
+P(x > 25) &= P(\frac{x-\mu}{\sigma} > \frac{25-\mu}{\sigma}), \sigma > 0\\
+&= P(\frac{x-5}{10} < \frac{25 - 5}{10})\\
+&= P(Y > 2)\\
+&= Q(2)
+\end{align*}
+$$
+
+## Chi Square RV
+
+Suppose $X_1, X_2, ..., X_k$ are independent $N(0, 1)$
+
+Let $Y = \sum_{i=1}^{k}x_i^2$
+
+$$
+f_Y(y)= \frac{y^{\frac{k-2}{2}e^\frac{-y}{2}}}{2^{\frac{k}{2}}\Gamma(\frac{k}{2})}
+$$
+
+$$
+\text{gamma function }\Gamma(z) = \int_0^\infty x^{z-1}e^{-x}dx
+$$
+
+### Special Case k=2:
+
+$$
+\Gamma(1) = \int_0^\infty x^{0}e^{-x}dx = 1
+$$
+
+$$
+f_Y(y)= \frac{y^{\frac{2-2}{2}e^\frac{-y}{2}}}{2^{\frac{2}{2}}\Gamma(\frac{2}{2})} = \frac{e^{-\frac{y}{2}}}{2}
+$$
+
+This case is $Y ~ \text{exponential}(\frac{1}{2})$
+
+
+## Cauchy RV
+
+$Z = \frac{x}{y}$ for $X,Y ~ N(0,1)$ is a Standard Gaussian and is independent.
+
+$$
+f_Z(z)=\frac{1}{\pi (1+z^2)} \text{ for }-\infty < z < \infty
+$$
+
+$$
+\Bbb{E}[z] = \int_{-\infty}^{\infty}z\frac{1}{\pi (1+z^2)}dz \text{ does not exist}
+$$
+
+This RV does not have a mean.
