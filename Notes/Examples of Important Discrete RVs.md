@@ -324,7 +324,7 @@ Count how many times we observed H.
 
 $X \in {0, 1, ..., 10}$
 
-$P(X=0) = (1-p)^10$
+$P(X=0) = (1-p)^{10}$
 
 $P(X=1) = {10 \choose 1}p^1(1-p)^9$
 
