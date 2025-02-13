@@ -51,13 +51,13 @@ $$
 $$
 
 $$
-\frac{d}{d\omega}\Phi_x(\omega) |_{\omega = 0} = \frac{j}{1!}\Bbb{E}[x]
+\frac{d}{d\omega}\Phi_x(\omega) \vert_{\omega = 0} = \frac{j}{1!}\Bbb{E}[x]
 $$
 
 The first moment of x is equal to:
 
 $$
-\Bbb{E}[x] = \frac{1}{j}(\frac{d}{d\omega}\Phi_x(\omega) |_{\omega = 0})
+\Bbb{E}[x] = \frac{1}{j}(\frac{d}{d\omega}\Phi_x(\omega) \vert_{\omega = 0})
 $$
 
 Let's do the second derivative of the characteristic function:
@@ -70,19 +70,19 @@ $$
 $$
 
 $$
-\frac{d^2}{d\omega^2}\Phi_x(\omega) |_{\omega = 0} = \frac{j^2}{1!}\Bbb{E}[x^2] = \Bbb{E}[x^2]
+\frac{d^2}{d\omega^2}\Phi_x(\omega) \vert_{\omega = 0} = \frac{j^2}{1!}\Bbb{E}[x^2] = \Bbb{E}[x^2]
 $$
 
 The second moment of x is equal to:
 
 $$
-\Bbb{E}[x^2] = \frac{1}{j^2}(\frac{d^2}{d\omega^2}\Phi_x(\omega) |_{\omega = 0})
+\Bbb{E}[x^2] = \frac{1}{j^2}(\frac{d^2}{d\omega^2}\Phi_x(\omega) \vert_{\omega = 0})
 $$
 
 In general:
 
 $$
-\Bbb{E}[x^k] = \frac{1}{j^k}(\frac{d^k}{d\omega^k}\Phi_x(\omega) |_{\omega = 0})
+\Bbb{E}[x^k] = \frac{1}{j^k}(\frac{d^k}{d\omega^k}\Phi_x(\omega) \vert_{\omega = 0})
 $$
 
 Examples:
@@ -94,7 +94,7 @@ $$
 $$
 
 $$
-\frac{d}{d\omega}\Phi_x(\omega)|_{\omega = 0} = \frac{\lambda j}{\lambda^2} = \frac{j}{\lambda}
+\frac{d}{d\omega}\Phi_x(\omega)\vert_{\omega = 0} = \frac{\lambda j}{\lambda^2} = \frac{j}{\lambda}
 $$
 
 $$
@@ -107,7 +107,7 @@ $$
 
 
 $$
-\frac{d^2}{d\omega^2}\Phi_x(\omega)|_{\omega = 0} = \frac{2\lambda j^2}{\lambda^3} = \frac{2j^2}{\lambda^2}
+\frac{d^2}{d\omega^2}\Phi_x(\omega)\vert_{\omega = 0} = \frac{2\lambda j^2}{\lambda^3} = \frac{2j^2}{\lambda^2}
 $$
 
 $$
@@ -153,9 +153,11 @@ $$
 
 In addition to $\Phi_x(\omega)$ there are also the following:
 
-* moment generating function $\Bbb{E}[e^{tx}]|_{t=jw}=\Phi_x(\omega)$
+* moment generating function $\Bbb{E}[e^{tx}]\vert_{t=jw}=\Phi_x(\omega)$
 * probability generating function: applies when x is integer value and non-negative
     * $G_x(z) = \Bbb{E}[z^X] = \sum_{k=0}^{\infty}P(X=k)z^k$ where $X$ is an RV and $z$ is a parameter
+
+Example geometric RV:
 
 $$
 \begin{align*}
@@ -166,9 +168,9 @@ G_X(z) &= \sum_{k=0}^{\infty}(1-p)^{k-1}pz^k \\
 $$
 
 $$
-G_X(z)|_{z=1} = 1
+G_X(z) \vert_{z=1} = 1
 $$
 
 $$
-\frac{d}{dx}G_X(z)|_{z=1} = \sum_{k=0}^{\infty} P(X=k)kz^{k-1}|_{z=1} = \Bbb{E}[x]
+\frac{dG_X(z)}{dx}\vert_{z=1} = \sum_{k=0}^{\infty} P(X=k) kz^{k-1} \vert_{z=1} = \Bbb{E} [x]
 $$
