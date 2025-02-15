@@ -15,7 +15,15 @@ In general we want to express $P(Y \in c) = P(g(x) \in c) = P(X \in B)$ where $B
 
 Procedure: to find the probability that $Y=y$, collect all values of $X=x$, such that $g(x)=y$ and add up their probabilities.
 
-Let $B_Y= \{x: g(x) = y\}, P(Y=y) = \sum P(X=x)$
+Let 
+
+$$
+B_Y= \{ x: g(x) = y \}
+$$
+
+$$
+P(Y=y) = \sum P(X=x)
+$$
 
 Example: Suppose there are $N$ sensors in a sensor network. Each sensor sends a signal to the fusion center with probability $p$ independently of other sensors. The network can sustain up to $M$ concurrent signals. When there are more than $M$ signals, $X-M$ of them are discarded at random. $X$ denotes the number of sensors sending signals. Compute the PMF of the number of discarded signals.
 
