@@ -360,7 +360,7 @@ Poisson RV is a discrete RV that measures the number of events per unit time, wh
 $\lambda$ is the average arrival rate
 
 $$
-P(X=k) = \frac{\lambda^ke^{-k}}{k!}
+P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}
 $$
 
 ## Continuous RVs
